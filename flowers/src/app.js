@@ -6,6 +6,7 @@ class View extends HTMLElement {
 
     constructor() { 
         super();
+        this.root = this.attachShadow({mode:"open"});
         this.state = "empty";
         this.flowers = ['rose', 'anotherose'];
     }
@@ -15,12 +16,17 @@ class View extends HTMLElement {
     }
     render() { 
         const template = html`
+        <style>
+            h2{
+                color: red;
+            }
+        </style>
         <ui5-datepicker @change="${e => this.onDateChange(e)}"></ui5-datepicker>
         <h2>hello ${this.state}</h2>
         ${this.flowers.map(f => this.flowerify(f))}
         <button @click="${_ => this.load()}">say</button>
         `;
-        render(template,this);
+        render(template,this.root);
     }
 
     onDateChange({ detail: { value} }) { 
