@@ -13,3 +13,9 @@ https://prettier.io/
 https://eslint.org/
 https://eslint.org/
 https://jshint.com/
+https://rollupjs.org/guide/en/
+https://www.snowpack.dev/
+https://www.chaijs.com/
+https://mochajs.org/
+https://jestjs.io/
+https://www.cypress.io/
