@@ -9,6 +9,7 @@ class View extends HTMLElement {
         this.root = this.attachShadow({mode:"open"});
         this.state = "empty";
         this.flowers = ['rose', 'anotherose'];
+        window.addEventListener('hugo', e => console.log(e));
     }
 
     connectedCallback() { 
